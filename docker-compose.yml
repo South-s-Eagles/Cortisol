@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: iot-conection
+    environment:
+      MYSQL_ROOT_PASSWORD: urubu100
+      MYSQL_DATABASE: cortisol
+      MYSQL_USER: urubu100
+      MYSQL_PASSWORD: urubu100
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
